@@ -1,0 +1,31 @@
+.actors-section {
+  display: flex;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.actors-section-left {
+  flex: 10%;
+  margin-top: 80px;
+}
+
+.actors-section-mid {
+  padding-top: 100px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  padding: 10px;
+}
+
+.actor-card {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.actors-section-right {
+  margin-top: 80px;
+  flex: 10%;
+}
+.actors-section Button {
+  height: 150px;
+  margin: 10px 10px 10px 10px;
+}

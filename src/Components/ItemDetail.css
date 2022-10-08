@@ -1,0 +1,43 @@
+.movie-section-one {
+  background-image: linear-gradient(
+    to right bottom,
+    rgba(15, 240, 179, 0.5),
+    rgba(9, 184, 195, 0.5)
+  );
+  padding-top: 100px;
+  padding-bottom: 40px;
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.movie-section-one-left {
+  flex: 10%;
+  margin-left: 20px;
+}
+
+.movie-section-one-left img {
+  border-radius: 20px;
+  width: 80%;
+}
+
+.movie-section-one-right {
+  flex: 50%;
+  margin-right: 20px;
+}
+
+.movie-topics-information {
+  display: flex;
+}
+.movie-topics-information li {
+  display: flex;
+}
+
+.movie-genre-header {
+  margin-right: 5px;
+}
+
+.movie-section-actions Button {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-right: 10px;
+}

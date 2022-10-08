@@ -1,0 +1,14 @@
+.grid-movie-catalog-container {
+  padding-top: 100px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: 10px;
+}
+
+.movie-catalog-item {
+  padding: 20px;
+}
+
+.movie-catalog-item img {
+  width: 100%;
+}

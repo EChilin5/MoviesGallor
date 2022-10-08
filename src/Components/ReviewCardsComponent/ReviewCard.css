@@ -1,0 +1,19 @@
+.review-header {
+  display: flex;
+}
+
+.review-header-left {
+  flex: 1;
+}
+
+.review-header-right {
+  flex: 1;
+  text-align: right;
+}
+
+.review-post-display {
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-bottom: 5px;
+  margin-top: 5px;
+}

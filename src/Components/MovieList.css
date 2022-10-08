@@ -1,0 +1,35 @@
+.card-grid {
+  display: flex;
+  margin-top: 5px;
+  margin-bottom: 30px;
+}
+
+.card-grid-left Button {
+  height: 200px;
+  color: black;
+  margin-left: 15px;
+  margin-right: 15px;
+  background-color: rgba(128, 128, 128, 0.116);
+}
+
+.card-grid-mid {
+  padding-top: 100px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: 10px;
+}
+
+.card-grid-mid img {
+  width: 100%;
+}
+
+.individual-card {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.card-grid-right Button {
+  height: 200px;
+  margin-left: 15px;
+  margin-right: 15px;
+}

@@ -21,3 +21,10 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+.env
+backend/MoviesGallor/MoviesGallor/bin/Debug/net5.0/appsettings.Development.json
+backend/MoviesGallor/MoviesGallor/bin/Debug/net5.0/appsettings.json
+backend/MoviesGallor/MoviesGallor/appsettings.Development.json
+backend/MoviesGallor/MoviesGallor/appsettings.json
+package-lock.json
+package.json

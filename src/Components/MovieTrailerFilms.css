@@ -1,0 +1,43 @@
+.movie-trailer-section-title {
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 40px;
+}
+
+.movie-trailer-section {
+  display: flex;
+  margin-left: 2%;
+  margin-right: 2%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.movie-trailer-section-left {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-right: 10px;
+}
+.movie-trailer-section-mid {
+  margin-top: 10px;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: 10px;
+}
+
+.movie-trailer-section-mid-video {
+  margin-right: 10px;
+  flex: 20%;
+}
+
+.movie-trailer-section-right {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-right: 10px;
+}
+
+.movie-trailer-section Button {
+  height: 180px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}

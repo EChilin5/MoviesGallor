@@ -1,0 +1,12 @@
+.signUp {
+  margin-left: 30%;
+  margin-right: 30%;
+  background-color: #fff;
+  padding: 20px 20px 20px 20px;
+  border-radius: 4px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.signUp Button {
+  width: 100%;
+}
