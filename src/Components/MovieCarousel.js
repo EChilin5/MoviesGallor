@@ -22,7 +22,7 @@ export const MovieCarousel = (props) => {
                 src={image}
                 alt="First slide"
                 width="100%"
-                height="500px"
+                height="350px"
                 onClick={() => openMovieDetail(item.id)}
               />
               <Carousel.Caption>
