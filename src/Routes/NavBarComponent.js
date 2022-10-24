@@ -32,7 +32,7 @@ const NavBarComponent = () => {
         <div>
           <Navbar expand="lg" bg="dark" variant="dark" fixed="top">
             <Container>
-              <Navbar.Brand href="#home">Chilin</Navbar.Brand>
+              <Navbar.Brand href="/">Movies Gallor</Navbar.Brand>
               <Navbar.Toggle aria-controls="responsive-navbar-nav" />
               <Navbar.Collapse id="responsive-navbar-nav">
                 <Nav className="me-auto">

@@ -1,5 +1,6 @@
 import React from "react";
 import Carousel from "react-bootstrap/Carousel";
+import "./MovieCarousel.css";
 
 export const MovieCarousel = (props) => {
   const openMovieDetail = (id) => {
@@ -21,8 +22,6 @@ export const MovieCarousel = (props) => {
               <img
                 src={image}
                 alt="First slide"
-                width="100%"
-                height="350px"
                 onClick={() => openMovieDetail(item.id)}
               />
               <Carousel.Caption>

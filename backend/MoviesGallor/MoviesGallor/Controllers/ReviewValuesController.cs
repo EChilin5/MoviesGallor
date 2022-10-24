@@ -25,7 +25,7 @@ namespace MoviesGallor.Controllers
         [HttpPost]
         public JsonResult addReview(Models.Review rev)
         {
-            string query = @"Insert into Reviews values(@rating, @description, @userId)";
+            string query = @"Insert into Reviews values(@rating, @description,  @movieId, @userId )";
             DataTable table = new DataTable();
             string sqlDatabaseSource = _configuration.GetConnectionString("MoviesAppCon");
             SqlDataReader myReader;
@@ -38,7 +38,9 @@ namespace MoviesGallor.Controllers
 
                     commad.Parameters.AddWithValue("@rating", rev.rating);
                     commad.Parameters.AddWithValue("@description", rev.description);
+                    commad.Parameters.AddWithValue("@movieId", rev.movieId);
                     commad.Parameters.AddWithValue("@userId", rev.userId);
+                    
                    
 
                     myReader = commad.ExecuteReader();
@@ -49,6 +51,7 @@ namespace MoviesGallor.Controllers
             }
             return new JsonResult("added successfully ");
         }
+        /*
 
         [HttpGet]
         public JsonResult getAllReviews()
@@ -65,6 +68,33 @@ namespace MoviesGallor.Controllers
                 {
 
              
+                    myReader = commad.ExecuteReader();
+                    table.Load(myReader);
+                    myReader.Close();
+
+                }
+            }
+            return new JsonResult(table);
+        }
+        */
+
+        [HttpPut]
+        public JsonResult getAllUserReviews (int movieId)
+        {
+            string query = @"Select R.reviewId, U.email, R.rating, R.description from Reviews as R, UserTable as U
+            Where R.userId = U.userId and R.movieId = @movieId";
+            DataTable table = new DataTable();
+            string sqlDatabaseSource = _configuration.GetConnectionString("MoviesAppCon");
+            SqlDataReader myReader;
+
+            using (SqlConnection myConn = new SqlConnection(sqlDatabaseSource))
+            {
+                myConn.Open();
+                using (SqlCommand commad = new SqlCommand(query, myConn))
+                {
+                    commad.Parameters.AddWithValue("@movieId", movieId);
+
+
                     myReader = commad.ExecuteReader();
                     table.Load(myReader);
                     myReader.Close();

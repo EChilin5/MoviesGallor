@@ -1,19 +1,26 @@
+.cast-list-title{
+  margin-left: 5%;
+  text-decoration: underline;
+}
+
 .actors-section {
   display: flex;
-  margin-left: 20px;
-  margin-right: 20px;
+  margin-left: 5%;
+  margin-right: 5%;
+  justify-content: space-evenly;
+
 }
 
 .actors-section-left {
-  flex: 10%;
-  margin-top: 80px;
+  flex: 5%;
+ 
 }
 
 .actors-section-mid {
-  padding-top: 100px;
+  flex: 70%;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-  padding: 10px;
+  padding: 2%;
 }
 
 .actor-card {
@@ -22,10 +29,13 @@
 }
 
 .actors-section-right {
-  margin-top: 80px;
-  flex: 10%;
+  flex: 5%;
 }
 .actors-section Button {
-  height: 150px;
-  margin: 10px 10px 10px 10px;
+  height: 100%;
+  padding: 10px;
+  margin: 10% 5% 0% 5%;
+  font-size: 2.5em;
+  background-color: #212121;
+  border: none;
 }

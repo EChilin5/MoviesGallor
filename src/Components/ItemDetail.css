@@ -1,9 +1,10 @@
 .movie-section-one {
-  background-image: linear-gradient(
+  /* background-image: linear-gradient(
     to right bottom,
     rgba(15, 240, 179, 0.5),
     rgba(9, 184, 195, 0.5)
-  );
+  ); */
+  background-color: #3d3d3d;
   padding-top: 100px;
   padding-bottom: 40px;
   display: flex;

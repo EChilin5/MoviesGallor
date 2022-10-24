@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import Card from "react-bootstrap/Card";
 import "./MovieList.css";
 import axios from "axios";
+import Button from "react-bootstrap/Button";
 
 const CardComponent = (props) => {
   const [movieImageHover, setVideoImageHover] = useState(false);
@@ -11,6 +12,8 @@ const CardComponent = (props) => {
 
   let videoUrl = `http://api.themoviedb.org/3/movie/${id}/videos?${key}`;
   let youtubeBASEURL = `https://www.youtube.com/embed/`;
+  let movieListUrl = `https://localhost:44332/api/MovieFavouriteValues`;
+  let imageWidthUrl = `https://image.tmdb.org/t/p/w500`;
 
   //  "https://www.youtube.com/embed/hEnr6Ewpu_U?autoplay=1&mute=1"
 
@@ -22,6 +25,30 @@ const CardComponent = (props) => {
   useEffect(() => {
     fetchMovieID();
   }, []);
+
+  const addFavorite = () => {
+    const id = localStorage.getItem("userId");
+    if (!props.status) {
+      let movieInfo = props.item;
+      axios
+        .post(`${movieListUrl}`, {
+          originalMovieId: Number(movieInfo.id),
+          title: movieInfo.title,
+          overview: movieInfo.overview,
+          genre_id: movieInfo.genres[0].id,
+          release: movieInfo.release_date,
+          frontImage: `${imageWidthUrl}` + movieInfo.poster_path,
+          backImage: `${imageWidthUrl}` + movieInfo.backdrop_path,
+          userId: id,
+        })
+        .then((res) => {
+          console.log(res.data);
+          console.log("hello");
+        });
+    } else {
+      alert("Already exist");
+    }
+  };
 
   const fetchMovieID = () => {
     axios.get(`${videoUrl}`).then((res) => {
@@ -48,39 +75,41 @@ const CardComponent = (props) => {
     setVideoImageHover(false);
   };
   return (
-    <div
-      onMouseEnter={() => onMouseEnterHandler()}
-      onMouseLeave={() => onMouseLeaveHandler()}
-      onClick={() => openMovieDetail(props.item.id)}
-    >
+    <div onClick={() => openMovieDetail(props.item.id)}>
       {movieImageHover === false ? (
         <div>
           <img
             src={props.item.backImage}
-            onClick={() => openMovieDetail(props.item.id)}
+            onMouseEnter={() => onMouseEnterHandler()}
+            onMouseLeave={() => onMouseLeaveHandler()}
             alt=""
           ></img>
 
           <Card.Body>
             <Card.Title>{props.item.title}</Card.Title>
-            <h4>{props.item.release}</h4>
+            <h6>{props.item.release}</h6>
           </Card.Body>
+          <Button onClick={() => addFavorite()}>Add Favorite</Button>
         </div>
       ) : (
-        <div>
+        <div
+          className="card-video-section"
+          onMouseLeave={() => onMouseLeaveHandler()}
+        >
           <iframe
             src={videoID}
             frameBorder="0"
             allow="autoplay; encrypted-media"
             allowFullScreen
-            title="video"
-            width="100%"
-            height="inherit"
+            title={props.item.title}
           />
-          <Card.Body>
-            <Card.Title>{props.item.title}</Card.Title>
-            <h4>{props.item.release}</h4>
-          </Card.Body>
+          <div className="card-video-section-details">
+            <Card.Body>
+              <Card.Title>{props.item.title}</Card.Title>
+              <h5>{props.item.release}</h5>
+            </Card.Body>
+            <Button>Add </Button>
+          </div>
         </div>
       )}
     </div>

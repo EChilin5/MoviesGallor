@@ -1,5 +1,6 @@
 import React from "react";
 import Card from "react-bootstrap/Card";
+import "./CastCard.css";
 
 const CastCard = (props) => {
   return (

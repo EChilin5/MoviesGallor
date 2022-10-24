@@ -15,10 +15,6 @@ export const ItemDetail = () => {
 
   console.log(id);
 
-  let tempData = [
-    { id: 1, name: "Edgar", rating: 5, description: "" },
-    { id: 2, name: "Dan", rating: 2, description: "" },
-  ];
   const [isLoading, setLoading] = useState(true);
   const [vidLoad, setVidLoad] = useState(true);
   const [showModal, setShowModal] = useState(false);
@@ -27,7 +23,8 @@ export const ItemDetail = () => {
   const [videoID, setVideoID] = useState([]);
   const [castMem, setCastMem] = useState([]);
   const [similarMovie, setSimilarMovie] = useState([]);
-  const [reviews, setReviews] = useState(tempData);
+  const [reviews, setReviews] = useState([]);
+  const [yourMovieName, setYourMovieNames] = useState([]);
   let key = process.env.REACT_APP_MOVIE_API;
   let baseUrl = `https://api.themoviedb.org/3/movie/${id}?${key}`;
   let imageBaseUrl = `https://image.tmdb.org/t/p/original`;
@@ -40,12 +37,17 @@ export const ItemDetail = () => {
   let movieListUrl = `https://localhost:44332/api/MovieFavouriteValues`;
   let imageWidthUrl = `https://image.tmdb.org/t/p/w500`;
 
+  let reviewUrl = `https://localhost:44332/api/ReviewValues
+  `;
+
   useEffect(() => {
     if (vidLoad === true || isLoading === true) {
       fetchMovieDetails();
       fetchMovieID();
       fetchCastDetails();
       fetchSimilarMovies();
+      getYourMovieList();
+      // getUserReviews();
     }
   }, []);
 
@@ -102,7 +104,43 @@ export const ItemDetail = () => {
     });
   };
 
+  const getYourMovieList = () => {
+    const id = localStorage.getItem("userId");
+
+    axios.put(`${movieListUrl}`, { userId: id }).then((res) => {
+      console.log(res.data);
+      for (var i = 0; i < res.data.length; i++) {
+        let movie = res.data[i];
+        setYourMovieNames((prev) => {
+          return [...prev, movie.title];
+        });
+      }
+    });
+  };
+
+  const getUserReviews = () => {
+    let film = movieInfo.id;
+    axios.put(`${reviewUrl}`, { movieId: film }).then((res) => {
+      for (var i = 0; i < res.data.length; i++) {
+        let userReview = res.data[i];
+        setReviews((prev) => {
+          return [...prev, userReview];
+        });
+      }
+    });
+  };
+
   const addNewReview = (reviewInfo) => {
+    axios
+      .post(`${reviewUrl}`, {
+        name: reviewInfo.name,
+        rating: reviewInfo.rating,
+        description: reviewInfo.description,
+        movieId: reviewInfo.movieId,
+      })
+      .then((res) => {
+        console.log(res.data);
+      });
     reviewInfo.id = reviewInfo.length;
     setReviews((prev) => {
       return [...prev, reviewInfo];
@@ -118,24 +156,30 @@ export const ItemDetail = () => {
 
   const addFavorite = () => {
     const id = localStorage.getItem("userId");
-    axios
-      .post(`${movieListUrl}`, {
-        originalMovieId: Number(movieInfo.id),
-        title: movieInfo.title,
-        overview: movieInfo.overview,
-        genre_id: movieInfo.genres[0].id,
-        release: movieInfo.release_date,
-        frontImage: `${imageWidthUrl}` + movieInfo.poster_path,
-        backImage: `${imageWidthUrl}` + movieInfo.backdrop_path,
-        userId: id,
-      })
-      .then((res) => {
-        console.log(res.data);
-        console.log("hello");
-      });
+    if (!(yourMovieName.indexOf(movieInfo.title) > -1)) {
+      axios
+        .post(`${movieListUrl}`, {
+          originalMovieId: Number(movieInfo.id),
+          title: movieInfo.title,
+          overview: movieInfo.overview,
+          genre_id: movieInfo.genres[0].id,
+          release: movieInfo.release_date,
+          frontImage: `${imageWidthUrl}` + movieInfo.poster_path,
+          backImage: `${imageWidthUrl}` + movieInfo.backdrop_path,
+          userId: id,
+        })
+        .then((res) => {
+          console.log(res.data);
+          console.log("hello");
+        });
+    } else {
+      alert("Already exist");
+    }
   };
 
   if (isLoading === true || vidLoad === true) {
+    //  getUserReviews();
+
     return <div className="App">Loading...</div>;
   }
 
@@ -207,8 +251,8 @@ export const ItemDetail = () => {
 
       {reviews.map((reviewInfo) => {
         return (
-          <div key={reviewInfo.id}>
-            <ReviewCard></ReviewCard>
+          <div key={reviewInfo.reviewId}>
+            <ReviewCard review={reviewInfo}></ReviewCard>
             <hr></hr>
           </div>
         );
@@ -217,6 +261,7 @@ export const ItemDetail = () => {
       <ReviewModal
         show={showModal}
         handleClose={closeReviewModal}
+        movieId={movieInfo.id}
         addReview={addNewReview}
       />
     </div>

@@ -85,7 +85,34 @@ namespace MoviesGallor.Controllers
         }
 
 
+        [HttpDelete]
+        public JsonResult deleteFavorite(Models.MovieFavoriteList movies)
+        {
+            string query = @"Delete From Movies where userId = @userId and originalMovieId = @originalMovieId";
+            DataTable table = new DataTable();
+            string sqlDatabaseSource = _configuration.GetConnectionString("MoviesAppCon");
+            SqlDataReader myReader;
 
+            using (SqlConnection myConn = new SqlConnection(sqlDatabaseSource))
+            {
+                myConn.Open();
+                using (SqlCommand commad = new SqlCommand(query, myConn))
+                {
+
+                    commad.Parameters.AddWithValue("@userId", movies.userId);
+                    commad.Parameters.AddWithValue("@originalMovieId", movies.originalMovieId);
+
+
+                    myReader = commad.ExecuteReader();
+                    table.Load(myReader);
+                    myReader.Close();
+
+                }
+
+            }
+
+            return new JsonResult("deleted successfully");
+        }
 
 
     }

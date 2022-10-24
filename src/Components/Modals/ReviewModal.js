@@ -8,12 +8,15 @@ const ReviewModal = (props) => {
   const [desc, setDesc] = useState();
 
   const onSaveReview = () => {
+    let filmId = props.movieId;
     let reviewInfo = {
       id: 0,
       name: "testing",
       rating: userRating,
       description: desc,
+      movieId: filmId,
     };
+    console.log(reviewInfo);
     props.addReview(reviewInfo);
     props.handleClose();
   };

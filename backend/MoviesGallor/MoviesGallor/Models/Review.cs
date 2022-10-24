@@ -11,5 +11,6 @@ namespace MoviesGallor.Models
         public int rating { get; set; }
         public string description { get; set; }
         public int userId { get; set; }
+        public int movieId { get; set; }
     }
 }

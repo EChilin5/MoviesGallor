@@ -6,6 +6,7 @@ import axios from "axios";
 export const HomePage = () => {
   const [topMovies, setTopMovies] = useState([]);
   const [yourMovies, setYourMovies] = useState([]);
+  const [yourMovieName, setYourMoviesName] = useState([]);
   let api = process.env.REACT_APP_MOVIE_API;
 
   // let genre = [
@@ -140,6 +141,9 @@ export const HomePage = () => {
         setYourMovies((prev) => {
           return [...prev, moviData];
         });
+        setYourMoviesName((prev) => {
+          return [...prev, moviData.title];
+        });
       }
     });
   };
@@ -178,6 +182,7 @@ export const HomePage = () => {
               title="Your MovieList"
               movieContent={yourMovies}
               id={16}
+              userList={yourMovieName}
             />
           </div>
           <hr></hr>
@@ -185,7 +190,12 @@ export const HomePage = () => {
       )}
 
       <div>
-        <MovieList title="Animation" movieContent={sortMovies(16)} id={16} />
+        <MovieList
+          title="Animation"
+          movieContent={sortMovies(16)}
+          id={16}
+          userList={yourMovieName}
+        />
       </div>
       <hr></hr>
       <div>
@@ -194,11 +204,17 @@ export const HomePage = () => {
           title="Action Movies"
           movieContent={sortMovies(28)}
           id={28}
+          userList={yourMovieName}
         />
       </div>
       <hr></hr>
       <div>
-        <MovieList title="Fantasy" movieContent={sortMovies(14)} id={14} />
+        <MovieList
+          title="Fantasy"
+          movieContent={sortMovies(14)}
+          id={14}
+          userList={yourMovieName}
+        />
       </div>
     </div>
   );

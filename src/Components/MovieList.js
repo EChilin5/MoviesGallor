@@ -21,6 +21,13 @@ const MovieList = (props) => {
     displayCard();
   };
 
+  let status =
+    props.userList != null
+      ? props.userList.indexOf(props.movieContent.title) > -1
+        ? true
+        : false
+      : false;
+
   // temp.genre_id.filter((test) => test === props.id)
 
   const displayCard = () => {
@@ -29,7 +36,7 @@ const MovieList = (props) => {
     return filter.slice(start, end).map((item) => {
       return (
         <div key={count++} className="individual-card">
-          <CardComponent item={item} />
+          <CardComponent item={item} favoriteList={status} />
         </div>
       );
     });
@@ -37,7 +44,7 @@ const MovieList = (props) => {
 
   return (
     <div>
-      <h3>{props.title}</h3>
+      <h3 className="film-type-name">{props.title}</h3>
       <div className="card-grid">
         <div className="card-grid-left">
           <Button onClick={() => decrementCount()}>{"<"}</Button>

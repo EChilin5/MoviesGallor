@@ -18,7 +18,7 @@ const CastList = (props) => {
 
   return (
     <div>
-      <h5>Actors</h5>
+      <h3 className="cast-list-title">Actors</h3>
       <div className="actors-section">
         <div className="actors-section-left">
           <Button onClick={() => onDecrement()}>{`<`}</Button>

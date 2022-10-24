@@ -1,15 +1,24 @@
+.film-type-name{
+  margin-left: 7%;
+  text-decoration: underline;
+}
+
 .card-grid {
   display: flex;
   margin-top: 5px;
   margin-bottom: 30px;
+  padding-left: 3%;
+  padding-right: 3%;
+ 
 }
 
 .card-grid-left Button {
-  height: 200px;
-  color: black;
-  margin-left: 15px;
-  margin-right: 15px;
-  background-color: rgba(128, 128, 128, 0.116);
+  height: 100%;
+  padding: 10px;
+  margin: 10% 5% 0% 5%;
+  font-size: 2.5em;
+  background-color: #212121;
+  border: none;
 }
 
 .card-grid-mid {
@@ -17,6 +26,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   padding: 10px;
+
 }
 
 .card-grid-mid img {
@@ -29,7 +39,30 @@
 }
 
 .card-grid-right Button {
-  height: 200px;
-  margin-left: 15px;
-  margin-right: 15px;
+  height: 100%;
+  padding: 10px;
+  margin: 10% 5% 0% 5%;
+  font-size: 2.5em;
+  background-color: #aaaaaa;
+  border: none;
+}
+
+
+
+.card-video-section iframe{
+  width: 100%;
+  height:200px;
+  background-color: black;
+  padding: 4%;
+}
+
+.card-video-section-details{
+
+padding: 4%;
+text-align: center;
+
+}
+
+.card-video-section button{
+  width:50%
 }

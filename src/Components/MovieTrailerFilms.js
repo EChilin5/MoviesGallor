@@ -30,8 +30,6 @@ const MovieTrailerFilms = (props) => {
               <div key={prev.id} className="movie-trailer-section-mid-video">
                 <div>
                   <iframe
-                    width="350"
-                    height="200"
                     src={`${vide}${prev.key}`}
                     frameBorder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
