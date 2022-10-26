@@ -228,8 +228,6 @@ export const ItemDetail = () => {
       </div>
 
       <div className="movie-trailer-list">
-        <h5>Movie Videos</h5>
-
         <MovieTrailerFilms
           mainTitle="Trailers"
           films={videoID.filter((mType) => mType.type === "Trailer")}

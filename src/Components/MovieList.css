@@ -1,4 +1,10 @@
+.film-movie-sections hr{
+  margin-left: 3%;
+  margin-right: 3%;
+}
+
 .film-type-name{
+  margin-top: 10px;
   margin-left: 7%;
   text-decoration: underline;
 }
@@ -43,7 +49,7 @@
   padding: 10px;
   margin: 10% 5% 0% 5%;
   font-size: 2.5em;
-  background-color: #aaaaaa;
+  background-color: #212121;
   border: none;
 }
 

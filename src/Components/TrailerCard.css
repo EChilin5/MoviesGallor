@@ -1,0 +1,15 @@
+.movie-trailer-film-iframe{
+    width: 21em;
+    height: 200px;
+    padding:2%;
+}
+
+.trailer-subtitle{
+    margin-top: 30px;
+}
+
+@media (max-width:600px){
+    .movie-trailer-film-iframe{
+        width:33em;
+    }
+}

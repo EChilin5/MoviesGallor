@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Button from "react-bootstrap/Button";
 import "./MovieTrailerFilms.css";
+import TrailerCard from "./TrailerCard";
 const MovieTrailerFilms = (props) => {
   let vide = `https://www.youtube.com/embed/`;
   const [start, setStart] = useState(0);
@@ -28,16 +29,7 @@ const MovieTrailerFilms = (props) => {
           {props.films.slice(start, end).map((prev) => {
             return (
               <div key={prev.id} className="movie-trailer-section-mid-video">
-                <div>
-                  <iframe
-                    src={`${vide}${prev.key}`}
-                    frameBorder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen
-                    title="Embedded youtube"
-                  />
-                </div>
-                <div> {prev.name} </div>
+                <TrailerCard link={`${vide}${prev.key}`} name={prev.name} />
               </div>
             );
           })}

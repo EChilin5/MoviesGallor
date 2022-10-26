@@ -167,6 +167,11 @@ export const HomePage = () => {
     return movies;
   };
 
+  const animationFilms = sortMovies(16);
+  const actionFilms = sortMovies(28);
+  const fantasyFilm = sortMovies(14);
+  const comedyFilm = sortMovies(35);
+
   return (
     <div className="homePage">
       <div>
@@ -185,37 +190,60 @@ export const HomePage = () => {
               userList={yourMovieName}
             />
           </div>
-          <hr></hr>
         </div>
       )}
 
-      <div>
-        <MovieList
-          title="Animation"
-          movieContent={sortMovies(16)}
-          id={16}
-          userList={yourMovieName}
-        />
-      </div>
-      <hr></hr>
-      <div>
-        {" "}
-        <MovieList
-          title="Action Movies"
-          movieContent={sortMovies(28)}
-          id={28}
-          userList={yourMovieName}
-        />
-      </div>
-      <hr></hr>
-      <div>
-        <MovieList
-          title="Fantasy"
-          movieContent={sortMovies(14)}
-          id={14}
-          userList={yourMovieName}
-        />
-      </div>
+      {animationFilms.length === 0 ? (
+        ""
+      ) : (
+        <div>
+          <MovieList
+            title="Animation"
+            movieContent={animationFilms}
+            id={16}
+            userList={yourMovieName}
+          />
+        </div>
+      )}
+
+      {actionFilms.length === 0 ? (
+        ""
+      ) : (
+        <div>
+          <MovieList
+            title="Action"
+            movieContent={actionFilms}
+            id={28}
+            userList={yourMovieName}
+          />
+        </div>
+      )}
+
+      {fantasyFilm.length === 0 ? (
+        ""
+      ) : (
+        <div>
+          <MovieList
+            title="Fantasy"
+            movieContent={fantasyFilm}
+            id={14}
+            userList={yourMovieName}
+          />
+        </div>
+      )}
+
+      {comedyFilm.length === 0 ? (
+        ""
+      ) : (
+        <div>
+          <MovieList
+            title="Comedy"
+            movieContent={comedyFilm}
+            id={35}
+            userList={yourMovieName}
+          />
+        </div>
+      )}
     </div>
   );
 };
