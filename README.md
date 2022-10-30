@@ -5,9 +5,7 @@
 #### Techologies used: React JS, C#, TSQL, and ASP.NET Framework to create Web Api.
 
 ## Upcoming Features
-- [ ] Update the design of the overall page
 - [ ] Let users update their information
-- [ ] Resolve issue with hovering to see trailer
 - [ ] Delete and edit review
 - [ ] Allow users to upvote comments
 - [ ] Host Database, Rest Api, and Web page online.
@@ -20,6 +18,8 @@
 - [x] Allow users to view a film information, trailer, feature,  cast, and similar films
 - [x] Able to leave reviews 
 - [x] Add movies to their favourite movie to their list
+- [x] Resolve issue with hovering to see trailer
+- [x] Update the design of the overall page
 
 ## Current App Screenshots
 
