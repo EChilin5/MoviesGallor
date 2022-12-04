@@ -23,9 +23,15 @@
   padding: 10px;
   margin: 10% 5% 0% 5%;
   font-size: 2.5em;
-  background-color: #212121;
+  background-color: transparent;
+  /* background-color: #212121; */
   border: none;
 }
+.card-grid-left Button:hover{
+  background-color: #212121;
+}
+
+
 
 .card-grid-mid {
   padding-top: 100px;
@@ -49,8 +55,12 @@
   padding: 10px;
   margin: 10% 5% 0% 5%;
   font-size: 2.5em;
-  background-color: #212121;
+  background-color: transparent;
   border: none;
+}
+
+.card-grid-right Button:hover{
+  background-color: #212121;
 }
 
 

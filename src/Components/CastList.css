@@ -36,6 +36,10 @@
   padding: 10px;
   margin: 10% 5% 0% 5%;
   font-size: 2.5em;
-  background-color: #212121;
+  background-color: transparent;
   border: none;
+}
+
+.actors-section Button:hover {
+  background-color: #212121;
 }
