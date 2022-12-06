@@ -42,7 +42,6 @@ C:\Users\edgar\OneDrive\Desktop\movieDB\movies\backend\MoviesGallor\MoviesGallor
 C:\Users\edgar\OneDrive\Desktop\movieDB\movies\backend\MoviesGallor\MoviesGallor\bin\Debug\net5.0\MoviesGallor.runtimeconfig.json
 C:\Users\edgar\OneDrive\Desktop\movieDB\movies\backend\MoviesGallor\MoviesGallor\bin\Debug\net5.0\MoviesGallor.runtimeconfig.dev.json
 C:\Users\edgar\OneDrive\Desktop\movieDB\movies\backend\MoviesGallor\MoviesGallor\bin\Debug\net5.0\MoviesGallor.dll
-C:\Users\edgar\OneDrive\Desktop\movieDB\movies\backend\MoviesGallor\MoviesGallor\bin\Debug\net5.0\ref\MoviesGallor.dll
 C:\Users\edgar\OneDrive\Desktop\movieDB\movies\backend\MoviesGallor\MoviesGallor\bin\Debug\net5.0\MoviesGallor.pdb
 C:\Users\edgar\OneDrive\Desktop\movieDB\movies\backend\MoviesGallor\MoviesGallor\bin\Debug\net5.0\Microsoft.AspNetCore.JsonPatch.dll
 C:\Users\edgar\OneDrive\Desktop\movieDB\movies\backend\MoviesGallor\MoviesGallor\bin\Debug\net5.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
@@ -58,7 +57,6 @@ C:\Users\edgar\OneDrive\Desktop\movieDB\movies\backend\MoviesGallor\MoviesGallor
 C:\Users\edgar\OneDrive\Desktop\movieDB\movies\backend\MoviesGallor\MoviesGallor\bin\Debug\net5.0\runtimes\win-x86\native\sni.dll
 C:\Users\edgar\OneDrive\Desktop\movieDB\movies\backend\MoviesGallor\MoviesGallor\bin\Debug\net5.0\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
 C:\Users\edgar\OneDrive\Desktop\movieDB\movies\backend\MoviesGallor\MoviesGallor\bin\Debug\net5.0\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
-C:\Users\edgar\OneDrive\Desktop\movieDB\movies\backend\MoviesGallor\MoviesGallor\obj\Debug\net5.0\MoviesGallor.csproj.AssemblyReference.cache
 C:\Users\edgar\OneDrive\Desktop\movieDB\movies\backend\MoviesGallor\MoviesGallor\obj\Debug\net5.0\MoviesGallor.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\edgar\OneDrive\Desktop\movieDB\movies\backend\MoviesGallor\MoviesGallor\obj\Debug\net5.0\MoviesGallor.AssemblyInfoInputs.cache
 C:\Users\edgar\OneDrive\Desktop\movieDB\movies\backend\MoviesGallor\MoviesGallor\obj\Debug\net5.0\MoviesGallor.AssemblyInfo.cs
@@ -68,7 +66,15 @@ C:\Users\edgar\OneDrive\Desktop\movieDB\movies\backend\MoviesGallor\MoviesGallor
 C:\Users\edgar\OneDrive\Desktop\movieDB\movies\backend\MoviesGallor\MoviesGallor\obj\Debug\net5.0\scopedcss\bundle\MoviesGallor.styles.css
 C:\Users\edgar\OneDrive\Desktop\movieDB\movies\backend\MoviesGallor\MoviesGallor\obj\Debug\net5.0\staticwebassets\MoviesGallor.StaticWebAssets.Manifest.cache
 C:\Users\edgar\OneDrive\Desktop\movieDB\movies\backend\MoviesGallor\MoviesGallor\obj\Debug\net5.0\MoviesGallor.RazorTargetAssemblyInfo.cache
+C:\Users\edgar\OneDrive\Desktop\movieDB\movies\backend\MoviesGallor\MoviesGallor\obj\Debug\net5.0\MoviesGallor.csproj.CopyComplete
 C:\Users\edgar\OneDrive\Desktop\movieDB\movies\backend\MoviesGallor\MoviesGallor\obj\Debug\net5.0\MoviesGallor.dll
 C:\Users\edgar\OneDrive\Desktop\movieDB\movies\backend\MoviesGallor\MoviesGallor\obj\Debug\net5.0\ref\MoviesGallor.dll
 C:\Users\edgar\OneDrive\Desktop\movieDB\movies\backend\MoviesGallor\MoviesGallor\obj\Debug\net5.0\MoviesGallor.pdb
 C:\Users\edgar\OneDrive\Desktop\movieDB\movies\backend\MoviesGallor\MoviesGallor\obj\Debug\net5.0\MoviesGallor.genruntimeconfig.cache
+C:\Users\edgar\OneDrive\Desktop\movieDB\movies\backend\MoviesGallor\MoviesGallor\obj\Debug\net5.0\MoviesGallor.csproj.AssemblyReference.cache
+C:\Users\edgar\OneDrive\Desktop\movieDB\movies\backend\MoviesGallor\MoviesGallor\obj\Debug\net5.0\staticwebassets\MoviesGallor.StaticWebAssets.Pack.cache
+C:\Users\edgar\OneDrive\Desktop\movieDB\movies\backend\MoviesGallor\MoviesGallor\obj\Debug\net5.0\staticwebassets\msbuild.MoviesGallor.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\edgar\OneDrive\Desktop\movieDB\movies\backend\MoviesGallor\MoviesGallor\obj\Debug\net5.0\staticwebassets\msbuild.build.MoviesGallor.props
+C:\Users\edgar\OneDrive\Desktop\movieDB\movies\backend\MoviesGallor\MoviesGallor\obj\Debug\net5.0\staticwebassets\msbuild.buildMultiTargeting.MoviesGallor.props
+C:\Users\edgar\OneDrive\Desktop\movieDB\movies\backend\MoviesGallor\MoviesGallor\obj\Debug\net5.0\staticwebassets\msbuild.buildTransitive.MoviesGallor.props
+C:\Users\edgar\OneDrive\Desktop\movieDB\movies\backend\MoviesGallor\MoviesGallor\obj\Debug\net5.0\refint\MoviesGallor.dll
