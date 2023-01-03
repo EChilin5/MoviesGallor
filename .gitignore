@@ -28,3 +28,4 @@ backend/MoviesGallor/MoviesGallor/appsettings.Development.json
 backend/MoviesGallor/MoviesGallor/appsettings.json
 package-lock.json
 package.json
+src/firebase/firebase.js

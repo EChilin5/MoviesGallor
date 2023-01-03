@@ -49,6 +49,7 @@ export const ItemDetail = () => {
       getYourMovieList();
       // getUserReviews();
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const fetchMovieDetails = () => {
@@ -118,17 +119,17 @@ export const ItemDetail = () => {
     });
   };
 
-  const getUserReviews = () => {
-    let film = movieInfo.id;
-    axios.put(`${reviewUrl}`, { movieId: film }).then((res) => {
-      for (var i = 0; i < res.data.length; i++) {
-        let userReview = res.data[i];
-        setReviews((prev) => {
-          return [...prev, userReview];
-        });
-      }
-    });
-  };
+  // const getUserReviews = () => {
+  //   let film = movieInfo.id;
+  //   axios.put(`${reviewUrl}`, { movieId: film }).then((res) => {
+  //     for (var i = 0; i < res.data.length; i++) {
+  //       let userReview = res.data[i];
+  //       setReviews((prev) => {
+  //         return [...prev, userReview];
+  //       });
+  //     }
+  //   });
+  // };
 
   const addNewReview = (reviewInfo) => {
     axios

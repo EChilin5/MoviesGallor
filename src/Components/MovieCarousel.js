@@ -4,7 +4,9 @@ import "./MovieCarousel.css";
 
 export const MovieCarousel = (props) => {
   const openMovieDetail = (id) => {
-    let urlItem = "http://localhost:3000/catalog/item/" + id;
+    // https://moviesgallor.web.app/
+    // http://localhost:3000/
+    let urlItem = "https://moviesgallor.web.app/catalog/item/" + id;
     window.open(urlItem);
     window.close();
   };

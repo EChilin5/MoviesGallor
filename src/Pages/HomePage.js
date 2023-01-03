@@ -95,6 +95,7 @@ export const HomePage = () => {
   useEffect(() => {
     getPopularMovies();
     getYourMovieList();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const getPopularMovies = () => {

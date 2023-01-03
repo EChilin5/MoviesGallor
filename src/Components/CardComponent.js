@@ -18,12 +18,31 @@ const CardComponent = (props) => {
   //  "https://www.youtube.com/embed/hEnr6Ewpu_U?autoplay=1&mute=1"
 
   const openMovieDetail = (id) => {
-    let urlItem = "http://localhost:3000/catalog/item/" + id;
+    // https://moviesgallor.web.app/
+    // http://localhost:3000/
+    let urlItem = "https://moviesgallor.web.app/catalog/item/" + id;
     window.open(urlItem);
     window.close();
   };
   useEffect(() => {
+    const fetchMovieID = () => {
+      axios.get(`${videoUrl}`).then((res) => {
+        let videKey = res.data.results[res.data.results.length - 1].key;
+        let finalVideoLink = `${youtubeBASEURL}${videKey}?autoplay=1&mute=1`;
+        setVideoID(finalVideoLink);
+
+        // for (var i = res.data.results.length - 1; i >= 0; i--) {
+        //   let youtube = res.data.results[i];
+
+        //   console.log(youtube);
+        //   setVideoID((prev) => {
+        //     return [...prev, youtube];
+        //   });
+        // }
+      });
+    };
     fetchMovieID();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const addFavorite = () => {
@@ -48,23 +67,6 @@ const CardComponent = (props) => {
     } else {
       alert("Already exist");
     }
-  };
-
-  const fetchMovieID = () => {
-    axios.get(`${videoUrl}`).then((res) => {
-      let videKey = res.data.results[res.data.results.length - 1].key;
-      let finalVideoLink = `${youtubeBASEURL}${videKey}?autoplay=1&mute=1`;
-      setVideoID(finalVideoLink);
-
-      // for (var i = res.data.results.length - 1; i >= 0; i--) {
-      //   let youtube = res.data.results[i];
-
-      //   console.log(youtube);
-      //   setVideoID((prev) => {
-      //     return [...prev, youtube];
-      //   });
-      // }
-    });
   };
 
   const onMouseEnterHandler = () => {
