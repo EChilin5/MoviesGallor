@@ -46,7 +46,7 @@ export const ItemDetail = () => {
       fetchMovieID();
       fetchCastDetails();
       fetchSimilarMovies();
-      getYourMovieList();
+      // getYourMovieList();
       // getUserReviews();
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps

@@ -20,7 +20,7 @@ const CardComponent = (props) => {
   const openMovieDetail = (id) => {
     // https://moviesgallor.web.app/
     // http://localhost:3000/
-    let urlItem = "https://moviesgallor.web.app/catalog/item/" + id;
+    let urlItem = "http://localhost:3000/catalog/item/" + id;
     window.open(urlItem);
     window.close();
   };
