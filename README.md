@@ -24,7 +24,7 @@
 - [x] Resolve issue with hovering to see trailer
 - [x] Update the design of the overall page
 
-## Current App Screenshots
+## Sample App Screenshots
 
 #### Home Page
 <img src='https://github.com/EChilin5/MoviesGallor/blob/master/screenshot/HomePage.png' title='Home Page' width='400' alt='home' /> 
