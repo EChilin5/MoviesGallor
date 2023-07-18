@@ -1,6 +1,6 @@
 import React from "react";
 import Carousel from "react-bootstrap/Carousel";
-import "./MovieCarousel.css";
+// import "./MovieCarousel.css";
 
 export const MovieCarousel = (props) => {
   const openMovieDetail = (id) => {
@@ -27,7 +27,7 @@ export const MovieCarousel = (props) => {
                 onClick={() => openMovieDetail(item.id)}
               />
               <Carousel.Caption>
-                <div className="gallery-box">
+                <div className="carousel__content">
                   <h3>{item.title}</h3>
                   <p>{item.overview.trim(20)}</p>
                 </div>

@@ -43,19 +43,18 @@ const MovieList = (props) => {
   };
 
   return (
-    <div className="film-movie-sections">
-      <h3 className="film-type-name">{props.title}</h3>
+    <div className="films">
+      <h3 className="films__name">{props.title}</h3>
       <div className="card-grid">
-        <div className="card-grid-left">
+        <div className="card-grid--left">
           <Button onClick={() => decrementCount()}>{"<"}</Button>
         </div>
-        <div className="card-grid-mid">{displayCard()}</div>
-        <div className="card-grid-right">
+        <div className="card-grid--mid">{displayCard()}</div>
+        <div className="card-grid--right">
           {" "}
           <Button onClick={() => incrementCount()}>{">"}</Button>
         </div>
       </div>
-      <hr />
     </div>
   );
 };

@@ -1,4 +1,5 @@
 import NavBarComponent from "./Routes/NavBarComponent";
+import "./sass/main.scss";
 
 function App() {
   return (
