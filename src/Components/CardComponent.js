@@ -94,10 +94,7 @@ const CardComponent = (props) => {
           <Button onClick={() => addFavorite()}>Add Favorite</Button>
         </div>
       ) : (
-        <div
-          className="card-video-section"
-          onMouseLeave={() => onMouseLeaveHandler()}
-        >
+        <div className="card-video" onMouseLeave={() => onMouseLeaveHandler()}>
           <iframe
             src={videoID}
             frameBorder="0"
@@ -105,7 +102,7 @@ const CardComponent = (props) => {
             allowFullScreen
             title={props.item.title}
           />
-          <div className="card-video-section-details">
+          <div className="card-video__details">
             <Card.Body>
               <Card.Title>{props.item.title}</Card.Title>
               <h5>{props.item.release}</h5>
