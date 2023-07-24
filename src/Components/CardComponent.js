@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Card from "react-bootstrap/Card";
-import "./MovieList.css";
+// import "./MovieList.css";
 import axios from "axios";
 import Button from "react-bootstrap/Button";
 
@@ -77,7 +77,10 @@ const CardComponent = (props) => {
     setVideoImageHover(false);
   };
   return (
-    <div onClick={() => openMovieDetail(props.item.id)}>
+    <div
+      className="movie-card-or"
+      onClick={() => openMovieDetail(props.item.id)}
+    >
       {movieImageHover === false ? (
         <div>
           <img
@@ -105,7 +108,7 @@ const CardComponent = (props) => {
           <div className="card-video__details">
             <Card.Body>
               <Card.Title>{props.item.title}</Card.Title>
-              <h5>{props.item.release}</h5>
+              <h6>{props.item.release}</h6>
             </Card.Body>
             <Button>Add </Button>
           </div>

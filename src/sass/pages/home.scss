@@ -1,8 +1,24 @@
 /// carousel seqction
 /// 
 /// 
+/// 
+.homePage{
+    margin-bottom: 5%;
+    & .genre{
+        margin-top: 2%;
+        margin-left: 2%;
+        margin-right: 2%;
+
+        &:not(:last-child){
+        border-bottom: 0.1rem solid gray;
+    }
+    }
+
+
+}
+
 .carousel{
-    margin-top: 5rem;
+    margin-top: 2rem;
 
     &-caption{
         background-color: rgba(0, 0, 0, 0.493);
@@ -26,7 +42,8 @@
 }
 
 .films{
-    border-bottom: 0.1rem solid gray;
+
+    
     margin: 0 3%;
 
     &__name{
@@ -38,17 +55,19 @@
 }
 
 .card-grid{
-    max-width: $grid-width;
-    margin: 0 auto;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+
 
     &--left{
         float: left;
-        width:calc((100%  - 11 * #{$gutter-horizontal}) / 10);
+        width:calc((100%  - 15 * #{$gutter-horizontal}) / 10);
         margin-left: $gutter-horizontal;
         & Button{
             height: 50%;
             padding: 1rem;
-            margin: 10% 5% 0% 5%;
+             margin: 10% 5% 0% 5%;
             font-size: 2.5em;
             background-color: transparent;
             border: none;
@@ -62,20 +81,19 @@
 
     &--mid{
         float: left;
-        width:calc( ((100%  -  3 * #{$gutter-horizontal}) /3.5 )* 3 + 2 * #{$gutter-horizontal});
-        & img{
-            width: 100% ;
-        }
+        width:calc( ((100%  -  3 * #{$gutter-horizontal}) /2 )* 3 + 2 * #{$gutter-horizontal});
+        
+        
     }
 
     &--right{
         float: left;
-        width:calc((100%  - 11 * #{$gutter-horizontal}) / 10);
+        width:calc((100%  - 15 * #{$gutter-horizontal}) / 10);
        
         & Button{
             height: 50%;
             padding: 1rem;
-            margin: 10% 5% 0% 5%;
+            margin-top: 10%;
             font-size: 2.5em;
             background-color: transparent;
             border: none;
@@ -91,14 +109,37 @@
 }
 
 .individual-card{
-    width:calc( ((100% - 3 * #{$gutter-horizontal}) / 3.2));
+    width:calc( ((100% - 2 * #{$gutter-horizontal}) / 3.2));
     float: left;
-    font-size: 2rem;
+    font-size: 3rem;
     text-align: center;
 
     &:not(:last-child){
-        margin-left: $gutter-horizontal;
+        margin-left: calc(#{$gutter-horizontal} /2);
     }
+}
+
+.movie-card-or{
+    .card-title{
+        margin-top: 3%;
+        font-size: 2rem;
+    }
+
+    h6{
+        margin-top: 3%;
+        font-size: 1.5rem;
+    }
+
+    img{
+        max-width:  100%;
+        object-fit: cover;
+        // height: 30vh;
+    }
+
+    .btn{
+        font-size: 1.2rem;
+    }
+
 }
 
 

@@ -183,7 +183,7 @@ export const HomePage = () => {
       ) : (
         <div>
           {" "}
-          <div>
+          <div className="genre">
             <MovieList
               title="Your MovieList"
               movieContent={yourMovies}
@@ -197,7 +197,7 @@ export const HomePage = () => {
       {animationFilms.length === 0 ? (
         ""
       ) : (
-        <div>
+        <div className="genre">
           <MovieList
             title="Animation"
             movieContent={animationFilms}
@@ -210,7 +210,7 @@ export const HomePage = () => {
       {actionFilms.length === 0 ? (
         ""
       ) : (
-        <div>
+        <div className="genre">
           <MovieList
             title="Action"
             movieContent={actionFilms}
@@ -223,7 +223,7 @@ export const HomePage = () => {
       {fantasyFilm.length === 0 ? (
         ""
       ) : (
-        <div>
+        <div className="genre">
           <MovieList
             title="Fantasy"
             movieContent={fantasyFilm}
@@ -236,7 +236,7 @@ export const HomePage = () => {
       {comedyFilm.length === 0 ? (
         ""
       ) : (
-        <div>
+        <div className="genre">
           <MovieList
             title="Comedy"
             movieContent={comedyFilm}
