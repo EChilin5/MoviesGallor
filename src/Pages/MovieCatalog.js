@@ -45,7 +45,7 @@ const MovieCatalog = () => {
 
   return (
     <div className="movie-catalog-page">
-      <div className="movie-catalog-input">
+      <div className="movie-catalog__input">
         <Form.Control
           type="text"
           placeholder="Search Movie"

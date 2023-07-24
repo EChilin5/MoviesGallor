@@ -1,5 +1,5 @@
 import React from "react";
-import "./MovieCatalog.css";
+// import "./MovieCatalog.css";
 
 const MovieCatalogList = (props) => {
   const openMovieDetail = (id) => {

@@ -1,0 +1,41 @@
+.movie-catalog-page{
+    padding-top: 7rem;
+    margin-left: 3rem;
+    margin-right: 3rem;
+
+}
+
+.movie-catalog__input{
+    font-size: $medium-font-size;
+    .form-control{
+        font-size: $medium-font-size;
+        padding-left: 1rem;
+
+    }
+}
+
+.grid-movie-catalog-container{
+   margin-top: 2%;
+    margin-bottom: 5%;
+}
+
+.movie-catalog-item{
+    float: right;
+    width:calc((100%  - 2 * #{$gutter-horizontal}) / 3);
+    margin-bottom: 2%;
+    
+    h5{
+        text-align: center;
+        font-size: $medium-font-size;
+        margin-top: 3%;
+    }
+
+    img{
+        width: 100%;
+    }
+
+    &:not(:last-child){
+        margin-left: calc(#{$gutter-horizontal}/2);
+    }
+
+}
